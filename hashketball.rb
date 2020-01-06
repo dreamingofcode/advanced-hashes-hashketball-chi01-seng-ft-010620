@@ -1,4 +1,4 @@
-
+'require pry'
 
 def game_hash
   {
@@ -109,6 +109,7 @@ end
 require 'pry'
 
 def num_points_scored(player_search)
+  binding.pry
   game_hash.each do |team, team_info|
     team_info[:players].each do |player|
       if player[:player_name] == player_search
@@ -186,14 +187,4 @@ def big_shoe_rebounds
   return rebounds
 end
 
-=begin
-def most_points_scored
-  game_hash.each do |team, team_info|
-    team_info[:players].each do |player|
-      if player[:points] == 33
-        p 'Ben Gordon'
-      end
-    end
-  end
-end
-=end
+
